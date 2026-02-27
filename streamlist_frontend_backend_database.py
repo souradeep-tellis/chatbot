@@ -23,10 +23,7 @@ class chatState(TypedDict):
 
 model_url=os.getenv("X_URL")
 load_dotenv()
-# llm=ChatOpenAI(model="gpt-4o-mini")
-# llm=ChatGoogleGenerativeAI(model="gemini-flash-lite-latest")
-#This is my azure server
-# http://20.193.153.224:11434
+
 llm=ChatOllama(
     model="qwen3-vl:235b-cloud",           
     base_url=model_url,
@@ -198,4 +195,5 @@ if user_input:
 
     if len( st.session_state["message_history"]) >1:
         st.rerun()
+
 
