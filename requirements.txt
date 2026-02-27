@@ -1,0 +1,8 @@
+langchain
+langgraph
+langchain_openai
+streamlit
+dotenv
+langchain_google_genai
+langchain-ollama
+langgraph-checkpoint-sqlite
