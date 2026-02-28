@@ -25,7 +25,7 @@ model_url=os.getenv("X_URL")
 load_dotenv()
 
 llm=ChatOllama(
-    model="qwen3-vl:235b-cloud",           
+    model="qwen3:4b",           
     base_url=model_url,
     validate_model_on_init=True)
 
@@ -195,5 +195,6 @@ if user_input:
 
     if len( st.session_state["message_history"]) >1:
         st.rerun()
+
 
 
