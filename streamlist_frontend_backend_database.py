@@ -25,8 +25,8 @@ model_url=os.getenv("X_URL")
 load_dotenv()
 
 llm=ChatOllama(
-    model="qwen3-vl:235b-cloud",           
-    base_url=model_url,
+    model=os.environ["OLLAMA_MODEL"],           
+    base_url=os.environ["OLLAMA_HOST"],
     validate_model_on_init=True)
 
 def chat_node(state:chatState):
